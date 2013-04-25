@@ -131,7 +131,7 @@ class dashboard (
       require    => Exec['db-migrate']
     }
   }
-
+  $dashboard_version = '1.2.21-1puppetlabs1'
   package { $dashboard_package:
     ensure  => $dashboard_version,
     require => [ Package['rdoc'], Package['rack']],
