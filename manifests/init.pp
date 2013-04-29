@@ -76,8 +76,8 @@ class dashboard (
   }
 
   package { $dashboard_package:
-    #ensure  => $dashboard_version,
-    ensure => '1.2.21-1puppetlabs1',
+    ensure  => $dashboard_version,
+    #ensure => '1.2.21-1puppetlabs1',
     require => [ Package['rdoc'], Package['rack']],
   }
 
